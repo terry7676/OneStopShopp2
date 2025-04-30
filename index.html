@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OneStopShopp Solutions| Creative Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header img {
+      max-height: 80px;
+      margin-bottom: 1rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: #0af;
+      text-decoration: none;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .carousel {
+      position: relative;
+      max-width: 100%;
+      overflow: hidden;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    .carousel img {
+      width: 100%;
+      display: none;
+    }
+    .carousel img.active {
+      display: block;
+    }
+    video {
+      width: 100%;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+    }
+    .social a {
+      margin: 0 0.5rem;
+      color: #0af;
+      text-decoration: none;
+    }
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="assets/logo.jpg" alt="Your Logo" />
+    <h1>OneStopShopp Solutions</h1>
+    <p>Design | AI Agents | Children's Books</p>
+    <nav>
+      <a href="#carousel">Gallery</a>
+      <a href="#videos">Videos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="carousel">
+    <h2>My Work – Image Carousel</h2>
+    <div class="carousel">
+      <img src="assets/example1.png" class="active" alt="Example Work 1" />
+      <img src="assets/example2.png" alt="Example Work 2" />
+      <img src="assets/example3.png" alt="Example Work 3" />
+    </div>
+  </section>
+
+  <section id="videos">
+    <h2>Project Videos</h2>
+    <video controls>
+      <source src="assets/sample-video1.mp4" type="video/mp4" />
+      Your browser doesn’t support video.
+    </video>
+    <video controls>
+      <source src="assets/sample-video2.mp4" type="video/mp4" />
+      Your browser doesn’t support video.
+    </video>
+  </section>
+
+  <section id="contact">
+    <h2>Let’s Connect</h2>
+    <p>Need logos, AI help, or a magical bedtime story? I’m your guy.</p>
+    <div class="social">
+      <a href="https://linkedin.com/terry-hilliard-5133391b7" target="_blank">Linkedin</a>
+      <a href="https://tiktok.com/terryhilliard3" target="_blank">TikTok</a>
+      <a href="https://facebook.com/terryh76" target="_blank">Facebook</a>
+      <a href="https://instagram.com/terry76767" target="_blank">Instagram</a>
+      <a href="https://youtube.com/@Ovrthnkdaily" target="_blank">YouTube</a>
+      <a href="mailto:onestopshopp76@gmail.com">Email</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 OneStopShopp Solutions. Created with hustle and imagination.</p>
+  </footer>
+
+  <script>
+    let slides = document.querySelectorAll('.carousel img');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3000);
+  </script>
+
+</body>
+</html>
