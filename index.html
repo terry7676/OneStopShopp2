@@ -95,19 +95,17 @@
     }
     .carousel img {
     width: 100%;
-    height: auto;
+    height: auto; /* Ensures proper scaling */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.6s ease-in-out;
     border-radius: 12px;
-    object-fit: contain; /* Prevent cropping */
+    object-fit: contain; /* Prevents cropping */
 }
-.carousel img.active 
-    opacity: 1; /* Show active image */
+
+.carousel img.active {
+    display: block; /* Ensures only active image is displayed */
+    opacity: 1; /* Makes active image visible */
 }
-    }
-    .carousel img.active {
-        display: block;
-        opacity: 1;
     }
     .carousel-controls {
         position: absolute;
