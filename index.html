@@ -95,11 +95,14 @@
     }
     .carousel img {
     width: 100%;
-    height: auto; /* Use auto for proper scaling */
-    display: none;
+    height: auto;
+    opacity: 0; /* Initially hidden */
     transition: opacity 0.6s ease-in-out;
     border-radius: 12px;
-    object-fit: contain; /* Change to contain if cropping isn't desired */
+    object-fit: contain; /* Prevent cropping */
+}
+.carousel img.active 
+    opacity: 1; /* Show active image */
 }
     }
     .carousel img.active {
@@ -359,6 +362,7 @@
 
     <script>
         let slides = document.querySelectorAll('.carousel img');
+slides[0].classList.add('active'); // Ensure the first image is visible
         let controls = document.querySelectorAll('.carousel-control');
         let current = 0;
         let sections = document.querySelectorAll('section');
