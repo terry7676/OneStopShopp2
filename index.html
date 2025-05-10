@@ -84,7 +84,7 @@
         color: transparent;
         display: inline-block;
     }
-    .carousel {
+    carousel {
         position: relative;
         overflow: hidden;
         border-radius: 16px;
@@ -94,18 +94,16 @@
         padding: 1rem;
     }
     .carousel img {
-    width: 100%;
-    height: auto; /* Ensures proper scaling */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.6s ease-in-out;
-    border-radius: 12px;
-    object-fit: contain; /* Prevents cropping */
-}
-
-.carousel img.active {
-    display: block; /* Ensures only active image is displayed */
-    opacity: 1; /* Makes active image visible */
-}
+        width: 100%;
+        display: none;
+        transition: opacity 0.6s ease-in-out;
+        border-radius: 12px;
+        object-fit: cover;
+        height: 400px;
+    }
+    .carousel img.active {
+        display: block;
+        opacity: 1;
     }
     .carousel-controls {
         position: absolute;
