@@ -94,12 +94,13 @@
         padding: 1rem;
     }
     .carousel img {
-        width: 100%;
-        display: none;
-        transition: opacity 0.6s ease-in-out;
-        border-radius: 12px;
-        object-fit: cover;
-        height: 400px;
+    width: 100%;
+    height: auto; /* Use auto for proper scaling */
+    display: none;
+    transition: opacity 0.6s ease-in-out;
+    border-radius: 12px;
+    object-fit: contain; /* Change to contain if cropping isn't desired */
+}
     }
     .carousel img.active {
         display: block;
