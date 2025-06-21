@@ -107,7 +107,7 @@
         transition: opacity 0.6s ease-in-out;
         border-radius: 12px;
         object-fit: cover;
-       height: 400px; /* Changed from 'cover' to 'contain' to prevent cropping */
+        height: 400px;
     }
     .carousel img.active {
         display: block;
@@ -296,7 +296,7 @@
             <div class="carousel-control" data-slide="2"></div>
             </div>
        </section>
-    
+
     <section id="videos">
     <h2>Project Videos</h2>
     <video muted autoplay playsinline loop>
@@ -406,6 +406,10 @@ slides[0].classList.add('active'); // Ensure the first image is visible
         }
 
         window.addEventListener('scroll', revealSections);
+        revealSections();
+    </script>More actions
+</body>
+</html>
         revealSections();
     </script>
 </body>
