@@ -101,14 +101,15 @@
         background-color: #2d3748;
         padding: 1rem;
     }
-    .carousel img {
-        width: 100%;
-        display: none;
-        transition: opacity 0.6s ease-in-out;
-        border-radius: 12px;
-        object-fit: cover;
-        height: 400px;
-    }
+   .carousel img {
+    width: 100%;
+    display: none;
+    transition: opacity 0.6s ease-in-out;
+    border-radius: 12px;
+    object-fit: contain;
+    height: 400px;
+    background: #2d3748;
+}
     .carousel img.active {
         display: block;
         opacity: 1;
