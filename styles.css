@@ -8,7 +8,9 @@
 /* BODY */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  background: linear-gradient(-45deg, #0f172a, #1e293b, #3b82f6, #9333ea);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
   color: white;
 }
 
