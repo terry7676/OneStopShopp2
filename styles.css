@@ -56,8 +56,14 @@ body {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   margin-bottom: 20px;
+
+  background: linear-gradient(90deg, #3b82f6, #9333ea, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: fadeIn 1s ease;
 }
 
 .hero p {
@@ -130,4 +136,21 @@ footer {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}.showcase {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 60px 20px;
+}
+
+.showcase img {
+  width: 280px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.showcase img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
