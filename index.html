@@ -1,418 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WBRDPLR010"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-WBRDPLR010');
-</script><meta name="google-site-verification" content="n3BJkwhAgtQDsRK7d868DBpJ1H-OTqXcnLQ4-y96mFQ" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OneStopShopp Solutions| Creative Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-    body {
-        font-family: 'Inter', sans-serif;
-        margin: 0;
-        background-color: #0f172a;
-        color: #e2e8f0;
-        line-height: 1.7;
-        scroll-behavior: smooth;
-    }
-    header {
-        background-color: #1e293b;
-        color: #f8fafc;
-        padding: 2.5rem 0;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-    }
-    header img {
-        max-height: 180px;
-        margin-bottom: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
-    }
-    header h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        background: linear-gradient(to right, #168ea3, #6ee7b7);
-        -webkit-background-clip: text;
-        color: transparent;
-        display: inline-block;
-        width: 100%; /* Force it to take the full width */
-        text-align: center; /* Re-center the heading text */
-    }
-    header p {
-        font-size: 1.25rem;
-        color: #cbd5e0;
-        margin-bottom: 0;
-        background: rgba(0, 0, 0, 0.6);
-        padding: 0.75rem 1.5rem;
-        border-radius: 16px;
-        display: inline-block;
-    }
-    nav {
-        margin-top: 2rem;
-    }
-    nav a {
-        margin: 0 2rem;
-        color: #a7f3d0;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 1.4rem;
-        transition: color 0.3s ease, transform 0.2s ease;
-    }
-    nav a:hover {
-        color: #f5f5f5;
-        transform: scale(1.1);
-    }
-    section {
-        padding: 4rem 0;
-        max-width: 1200px;
-        margin: auto;
-        text-align: center;
-        opacity: 0;
-        transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-        transform: translateY(30px);
-    }
-    section.active {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    section h2 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
-        background: linear-gradient(to right, #168ea3, #6ee7b7);
-        -webkit-background-clip: text;
-        color: transparent;
-        display: inline-block;
-    }
-    carousel {
-        position: relative;
-        overflow: hidden;
-        border-radius: 16px;
-        margin-bottom: 2rem;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        background-color: #2d3748;
-        padding: 1rem;
-    }
-   .carousel img {
-    width: 100%;
-    display: none;
-    transition: opacity 0.6s ease-in-out;
-    border-radius: 12px;
-    object-fit: contain;
-    height: 400px;
-    background: #2d3748;
-}
-    .carousel img.active {
-        display: block;
-        opacity: 1;
-    }
-    .carousel-controls {
-        position: absolute;
-        bottom: 1.5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 1rem;
-    }
-    .carousel-control {
-        width: 14px;
-        height: 14px;
-        border-radius: 50%;
-        background-color: #cbd5e0;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-        border: 3px solid transparent;
-    }
-    .carousel-control.active {
-        background-color: #00b0ff;
-        transform: scale(1.3);
-        border-color: #fff;
-        box-shadow: 0 0 5px #fff;
-    }
-    .carousel-control:hover {
-        background-color: #6ee7b7;
-        transform: scale(1.2);
-    }
-    video {
-        width: 100%;
-        margin-bottom: 2rem;
-        border-radius: 16px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        background-color: #000;
-        aspect-ratio: 16 / 9;
-    }
-    .social {
-        margin-top: 2rem;
-        font-size: 1.75rem;
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-    }
-    .social a {
-        display: inline-block;
-        margin: 0.75rem 0;
-        color: #a7f3d0;
-        text-decoration: none;
-        transition: color 0.3s ease, transform 0.3s ease;
-    }
-    .social a:hover {
-        color: #f5f5f5;
-        transform: scale(1.2);
-    }
-    footer {
-        background-color: #1e293b;
-        color: #f8fafc;
-        text-align: center;
-        padding: 2rem;
-        margin-top: 4rem;
-        border-top: 1px solid #4a5568;
-        border-radius: 12px 12px 0 0;
-    }
-    .drive-upload {
-        margin-top: 4rem;
-        padding: 2.5rem;
-        background-color: #e5e7eb;
-        border: 2px dashed #9ca3af;
-        border-radius: 16px;
-        text-align: center;
-        color: #4b5563;
-    }
-    .drive-upload a {
-        color: #00b0ff;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s ease;
-    }
-    .drive-upload a: hover {
-        color: #00869e;
-    }
-    #contact {
-        background-color: #0f172a; /* Changed to match the body background */
-        padding: 4rem 0;
-        border-radius: 16px;
-        margin-top: 4rem;
-        color: #e2e8f0; /* Ensure the text color remains readable */
-    }
-    #contact h2{
-        background: linear-gradient(to right, #00b0ff, #6ee7b7);
-        -webkit-background-clip: text;
-        color: transparent;
-        display: inline-block;
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
-    }
-    .stripe-button-container {
-        margin-top: 2rem;
-        text-align: center;
-    }
-
-    .stripe-button {
-        background-color: #6366f1;
-        color: #f9fafb;
-        padding: 1rem 2rem;
-        border-radius: 8px;
-        font-size: 1.2rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        border: none;
-        text-decoration: none; /* To make it behave like a link */
-    }
-
-    .stripe-button:hover {
-        background-color: #4338ca;
-        transform: scale(1.05);
-    }
-
-    .stripe-button:active {
-        transform: scale(0.95);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    @media (max-width: 768px) {
-        header h1 {
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-        }
-        nav a {
-            margin: 0 1.5rem;
-            font-size: 1.2rem;
-        }
-        section h2 {
-            font-size: 2rem;
-        }
-        .social {
-            font-size: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
-        }
-    }
-</style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OneStopShopp Solutions</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <header>
-        <img src="assets/logo.png" alt="Your Logo" />
-        <h1>OneStopShopp Solutions</h1>
-        <p>Designs | AI Agents(Bots) | Children's Books</p>
-        <nav>
-            <a href="#carousel">Gallery</a>
-            <a href="#videos">Videos</a>
-            <a href="#offerings">About</a>
-            <a href="#contact">Contact</a>
-            <a href="https://onestopshopp-solutions.printful.me/">T-Shirts</a>
-            <a href="https://www.amazon.com/author/onestopshopp" target="_blank" rel="noopener noreferrer">Books on Amazon</a>
-        </nav>
-    </header>
 
-    <section id="carousel">
-        <h2>My Work – T-Shirts - Book's & Logo's</h2>
-        <div class="carousel">
-            <img src="assets/example1.jpeg" class="active" alt="Example Work 1" />
-            <img src="assets/example2.png" alt="Example Work 2" />
-            <img src="assets/example4.png" alt="Example Work 4" />
-            <img src="assets/example5.png" alt="Example Work 5" />
-            <img src="assets/example6.png" alt="Example Work 6" />
-            <img src="assets/example7.png" alt="Example Work 7" />
-            <img src="assets/example3.PNG" alt="Example Work 3" />
-        </div>
-        <div class="carousel-controls">
-            <div class="carousel-control active" data-slide="0"></div>
-            <div class="carousel-control" data-slide="1"></div>
-            <div class="carousel-control" data-slide="4"></div>
-            <div class="carousel-control" data-slide="5"></div>
-            <div class="carousel-control" data-slide="3"></div>
-            <div class="carousel-control" data-slide="2"></div>
-            </div>
-       </section>
+<!-- NAV -->
+<header class="navbar">
+  <h1>OneStopShopp Solutions</h1>
+  <a href="#Solutions">Solutions</a>
+  <a href="#contact">Contact</a>
+</header>
 
-    <section id="videos">
-    <h2>Project Videos</h2>
-    <video muted autoplay playsinline loop>
-        <source src="assets/sample-video1.mp4" type="video/mp4" />
-        Your browser doesn’t support video.
-    </video>
-         <video muted autoplay playsinline loop>
-        <source src="assets/sample-video4.mp4" type="video/mp4" />
-        Your browser doesn’t support video.
-    </video>
-    <video  muted autoplay playsinline loop>
-        <source src="assets/sample-video3.mp4" type="video/mp4" />
-        Your browser doesn’t support video.
-    </video>
-    <video muted autoplay playsinline loop>
-        <source src="assets/sample-video2.mp4" type="video/mp4" />
-        Your browser doesn’t support video.
-    </video>
+<!-- HERO -->
+<section class="hero">
+  <h1>I Build & Fix Websites That Actually Work 🚀</h1>
+  <p>Need a website? Something broken? I help you launch, fix, and improve your online presence fast.</p>
+  <a href="#Solutions">
+    <button class="primary">View Services</button>
+  </a>
 </section>
-         <section id="offerings">
-        <h2>What I Do & What I Offer</h2>
-        <p>
-            I offer professionally crafted logos, compelling visual content, and high-quality video production tailored to reflect your brand's identity that will leave a lasting impression. I aim to strengthen your online presence and communicate your message, creatively and professionally. Contact us today!</p
-        </p>
-        <ul>
-            <li>
-                <strong>Design:</strong> Logo design, branding, video content, web design, and marketing materials.
-            </li>
-            <li>
-                <strong>AI Agents:</strong> Development of custom AI agents for various applications.
-            </li>
-            <li>
-                <strong>Children's Books:</strong> Writing, illustration, and publishing of personalized children's books.
-            </li>
-        </ul>
-        <p>
-            Let me help you increase your online presence and create amazing content!
-        </p>
-    </section>
 
-    <section id="contact">
-        <h2>Let’s Connect</h2>
-        <p>Need logos, content creation, AI help, or a personalized children's story? Contact me now.</p>
-        <div class="social">
-            <a href="https://instagram.com/tsh76767" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://facebook.com/terryh76" target="_blank" rel="noopener noreferrer">facebook</a>
-            <a href="https://youtube.com/@AvatarsAfterHours" target="_blank" rel="noopener noreferrer">YouTube</a>
-            <a href="https://www.tiktok.com/@terryhilliard3" target="_blank" rel="noopener noreferrer">TikTok</a>
-            <a href="mailto:onestopshopp76@gmail.com.com">Email</a>
-        </div>
-        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="terry-hilliard-5133391b7" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/terry-hilliard-5133391b7?trk=profile-badge">Linkedn-Terry Hilliard</a></div>
+<!-- SERVICES -->
+<section id="Solutions" class="Solutions">
 
-        <div class="stripe-button-container">
-            <a href="https://buy.stripe.com/9AQ8y6cMZ3HNaPuaEF" target="_blank" rel="noopener noreferrer" class="stripe-button">
-                Pay with Stripe
-            </a>
-        </div>
-        <div class="drive-upload">
-            <p>Leave Your Info Here:</p>
-            <a href="https://forms.gle/uWaqToui1JMGsdSy9 " target="_blank" rel="noopener noreferrer">Contact Form</a>
-        </div>
-    </section>
+  <h2>Solutions</h2>
 
-    <footer>
-        <p>© 2025 OneStopShopp Solutions-AgentX_Ai & Terry's Domain! Created with hustle and imagination.</p>
-    </footer>
+  <div class="grid">
 
-    <script>
-        let slides = document.querySelectorAll('.carousel img');
-slides[0].classList.add('active'); // Ensure the first image is visible
-        let controls = document.querySelectorAll('.carousel-control');
-        let current = 0;
-        let sections = document.querySelectorAll('section');
+    <div class="card">
+      <h3>🔧 Website Fix / Repair</h3>
+      <p>Broken layout? Errors? I fix issues fast so your site works properly again.</p>
+      <strong>$50+</strong>
+      <a href="YOUR_STRIPE_LINK">
+        <button>Fix My Site</button>
+      </a>
+    </div>
 
-        function showSlide(index) {
-            slides.forEach(img => img.classList.remove('active'));
-            controls.forEach(control => control.classList.remove('active'));
-            slides[index].classList.add('active');
-            controls[index].classList.add('active');
-            current = index;
-        }
+    <div class="card featured">
+      <h3>🌐 Website Setup</h3>
+      <p>Get a clean, modern website ready to launch and impress visitors.</p>
+      <strong>$150+</strong>
+      <a href="YOUR_STRIPE_LINK">
+        <button>Start My Website</button>
+      </a>
+    </div>
 
-        function nextSlide() {
-            current = (current + 1) % slides.length;
-            showSlide(current);
-        }
+    <div class="card">
+      <h3>⚙️ Monthly Support</h3>
+      <p>Ongoing updates, fixes, and improvements so your site stays fresh.</p>
+      <strong>$30/mo</strong>
+      <a href="YOUR_STRIPE_LINK">
+        <button>Subscribe</button>
+      </a>
+    </div>
 
-        let intervalId = setInterval(nextSlide, 3000);
+  </div>
+</section>
 
-        controls.forEach((control, index) => {
-            control.addEventListener('click', () => {
-                clearInterval(intervalId);
-                showSlide(index);
-                intervalId = setInterval(nextSlide, 3000);
-            });
-        });
+<!-- WHY CHOOSE ME -->
+<section class="trust">
+  <h2>Why Choose Me?</h2>
+  <div class="grid small">
+    <div>✔️ Fast turnaround</div>
+    <div>✔️ Affordable pricing</div>
+    <div>✔️ Clean modern design</div>
+    <div>✔️ Real results</div>
+  </div>
+</section>
 
-        // Fade in sections on scroll
-        function revealSections() {
-            sections.forEach(section => {
-                let top = section.getBoundingClientRect().top;
-                let windowHeight = window.innerHeight;
-                if (top < windowHeight * 0.8) {
-                    section.classList.add('active');
-                }
-            });
-        }
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to get your website handled?</h2>
+  <a href="YOUR_STRIPE_LINK">
+    <button class="primary">Get Started Now</button>
+  </a>
+</section>
 
-        window.addEventListener('scroll', revealSections);
-        revealSections();
-    </script>More actions
-</body>
-</html>
-        revealSections();
-    </script>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Email: onestopshopp76@gmail.com</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 OneStopShopp Solutions</p>
+</footer>
+
 </body>
 </html>
