@@ -7,8 +7,8 @@
 
 /* BODY */
 body {
-  font-family: Arial, sans-serif;
-  background: #0f172a;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
 }
 
@@ -16,26 +16,112 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background: #111827;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  position: relative;
+}
+
+/* underline animation */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #3b82f6;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 140px 20px;
 }
 
 .hero h1 {
-  font-size: 2rem;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  opacity: 0.8;
+  margin-bottom: 20px;
 }
 
 /* BUTTON */
-button {
-  padding: 10px 20px;
-  background: #3b82f6;
+.primary {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
   border: none;
+  border-radius: 10px;
   color: white;
   cursor: pointer;
-  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.primary:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(59,130,246,0.5);
+}
+
+/* SERVICES */
+.services {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* CARDS */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 12px;
+  width: 260px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.03);
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* TRUST */
+.trust {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* CTA */
+.cta {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.05);
 }
