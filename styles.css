@@ -1,60 +1,89 @@
-body {
+/* RESET */
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0f172a;
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* BODY */
 body {
-  background: lime !important;
-}
-git add .
-git commit -m "fix css properly"
-git push
-/* NAV */
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  align-items: center;
+  padding: 20px 40px;
   background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #3b82f6;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  opacity: 0.8;
+  margin-bottom: 20px;
 }
 
 .primary {
-  background: #3b82f6;
   padding: 12px 24px;
+  background: #3b82f6;
   border: none;
+  border-radius: 8px;
   color: white;
   cursor: pointer;
-  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.primary:hover {
+  background: #2563eb;
+  transform: scale(1.05);
 }
 
 /* SERVICES */
 .services {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
+}
+
+.services h2 {
+  margin-bottom: 40px;
 }
 
 .grid {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   flex-wrap: wrap;
 }
 
-.grid.small div {
-  background: rgba(255,255,255,0.05);
-  padding: 15px;
-  border-radius: 8px;
-}
-
+/* CARDS */
 .card {
   background: rgba(255,255,255,0.05);
-  padding: 25px;
+  padding: 30px;
   border-radius: 12px;
   width: 260px;
   transition: 0.3s;
@@ -62,8 +91,24 @@ git push
 
 .card:hover {
   transform: translateY(-10px);
+  background: rgba(255,255,255,0.1);
 }
 
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  opacity: 0.8;
+}
+
+.card strong {
+  display: block;
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
+/* FEATURED CARD */
 .featured {
   border: 2px solid #3b82f6;
 }
@@ -74,21 +119,34 @@ git push
   text-align: center;
 }
 
+.grid.small {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.grid.small div {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 8px;
+}
+
 /* CTA */
 .cta {
-  text-align: center;
   padding: 80px 20px;
+  text-align: center;
 }
 
 /* CONTACT */
 .contact {
+  padding: 50px;
   text-align: center;
-  padding: 40px;
 }
 
 /* FOOTER */
 footer {
-  text-align: center;
   padding: 20px;
+  text-align: center;
   background: rgba(255,255,255,0.05);
 }
