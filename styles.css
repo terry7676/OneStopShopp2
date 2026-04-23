@@ -7,6 +7,9 @@ body {
 body {
   background: lime !important;
 }
+git add .
+git commit -m "fix css properly"
+git push
 /* NAV */
 .navbar {
   display: flex;
