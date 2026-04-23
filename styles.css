@@ -120,7 +120,13 @@ body {
   padding: 60px 20px;
   text-align: center;
 }
-
+.showcase {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+}
 /* CTA */
 .cta {
   padding: 80px 20px;
@@ -153,4 +159,9 @@ footer {
 .showcase img:hover {
   transform: scale(1.08);
   box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}.showcase video {
+  width: 250px;        /* controls size */
+  max-width: 100%;     /* keeps it responsive */
+  border-radius: 12px;
+  transition: 0.3s ease;
 }
