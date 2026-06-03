@@ -45,11 +45,11 @@ body::before {
   letter-spacing: 1px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .logo-img {
-  height: 40px;
+  height: 24px;
   width: auto;
   object-fit: contain;
 }
