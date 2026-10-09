@@ -188,7 +188,7 @@
       <section class="section media-spotlight">
         <h2>Signal in the Noise</h2>
         <div class="spotlight-video">
-          <video preload="none" muted loop playsinline poster="./assets/signal-poster.jpg">
+          <video autoplay preload="auto" muted loop playsinline poster="./assets/signal-poster.jpg">
             <source src="./assets/signal-in-the-noise.mp4" type="video/mp4" />
           </video>
         </div>
@@ -201,9 +201,9 @@
       <section class="section showcase-section">
         <h2>Project Showcase</h2>
         <div class="video-grid">
-          <video
+          <video autoplay
             poster="https://res.cloudinary.com/dc8rtuiyk/video/upload/so_0,w_640/v1779399124/sample-video1_hhpzmg.jpg"
-            preload="none"
+            preload="auto"
             muted
             loop
             playsinline
@@ -212,9 +212,9 @@
               src="https://res.cloudinary.com/dc8rtuiyk/video/upload/q_auto/f_mp4/v1779399124/sample-video1_hhpzmg.mp4"
               type="video/mp4"
             /></video
-          ><video
+          ><video autoplay
             poster="https://res.cloudinary.com/dc8rtuiyk/video/upload/so_0,w_640/v1779399124/sample-video2_ucpraj.jpg"
-            preload="none"
+            preload="auto"
             muted
             loop
             playsinline
@@ -223,13 +223,13 @@
               src="https://res.cloudinary.com/dc8rtuiyk/video/upload/q_auto/f_mp4/v1779399124/sample-video2_ucpraj.mp4"
               type="video/mp4"
             /></video
-          ><video poster="./assets/showcase-video3.jpg" preload="none" muted loop playsinline>
+          ><video autoplay poster="./assets/showcase-video3.jpg" preload="auto" muted loop playsinline>
             <source src="./assets/showcase-video3.mp4" type="video/mp4" /></video
-          ><video poster="./assets/showcase-video4.jpg" preload="none" muted loop playsinline>
+          ><video autoplay poster="./assets/showcase-video4.jpg" preload="auto" muted loop playsinline>
             <source src="./assets/showcase-video4.mp4" type="video/mp4" /></video
-          ><video poster="./assets/showcase-video5.jpg" preload="none" muted loop playsinline>
+          ><video autoplay poster="./assets/showcase-video5.jpg" preload="auto" muted loop playsinline>
             <source src="./assets/showcase-video5.mp4" type="video/mp4" /></video
-          ><video poster="./assets/showcase-video6.jpg" preload="none" muted loop playsinline>
+          ><video autoplay poster="./assets/showcase-video6.jpg" preload="auto" muted loop playsinline>
             <source src="./assets/showcase-video6.mp4" type="video/mp4" />
           </video>
         </div>
@@ -283,31 +283,13 @@
     <footer><p>© 2026 OneStopShopp Solutions • Published Author • Ghostwriter • AI Content Specialist</p></footer>
     <script>
       (function () {
-        var v = document.querySelectorAll("video");
-        if (!v.length) return;
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
-          v.forEach(function (x) {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          document.querySelectorAll("video").forEach(function (x) {
+            x.autoplay = false;
+            x.pause();
             x.controls = true;
           });
-          return;
         }
-        var io = new IntersectionObserver(
-          function (es) {
-            es.forEach(function (e) {
-              var x = e.target;
-              if (e.isIntersecting) {
-                var p = x.play();
-                if (p && p.catch) p.catch(function () {});
-              } else {
-                x.pause();
-              }
-            });
-          },
-          { threshold: 0.25 },
-        );
-        v.forEach(function (x) {
-          io.observe(x);
-        });
       })();
     </script>
   </body>
