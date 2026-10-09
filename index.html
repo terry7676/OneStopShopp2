@@ -29,7 +29,7 @@
       content="https://terry7676.github.io/OneStopShopp2/assets/logo.png"
     />
     <link rel="icon" href="./assets/logo.png" />
-    <link rel="stylesheet" href="./styles.css?v=2043" />
+    <link rel="stylesheet" href="./styles.css?v=2044" />
   </head>
   <body>
     <header class="navbar">
@@ -290,6 +290,36 @@
             x.controls = true;
           });
         }
+      })();
+    </script>
+    <script>
+      (function () {
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var targets = [];
+        document.querySelectorAll("main > section").forEach(function (el) {
+          el.classList.add("reveal");
+          targets.push(el);
+        });
+        document.querySelectorAll(".grid > *, .book-grid > *").forEach(function (el, i) {
+          el.classList.add("reveal");
+          el.style.transitionDelay = (i % 4) * 0.08 + "s";
+          targets.push(el);
+        });
+        if (reduceMotion || !("IntersectionObserver" in window)) return;
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+        );
+        targets.forEach(function (el) {
+          io.observe(el);
+        });
       })();
     </script>
   </body>
